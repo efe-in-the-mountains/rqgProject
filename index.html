@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="hell">
+<body class="heaven">
 
     <!-- header -->
     <header>
@@ -22,26 +22,38 @@
         <h2>Excerpts from the Devil's Dictionary</h2>
     </header>
 
-    <!-- button container -->
-    
-        <button id="quoteBtn" class="button">Quote</button>
-        
+    <!-- button arcade -->
+    <div id="btnArcade" class="flex row">
+        <button id="quoteBtn" class="button">
+            <span id="moreButtonText">Yes, please!</span>
+        </button>
+        <button id="quoteBtn" class="button">
+            <span id="lessButtonText"> SAVE me, Jeebus!</span>
+        </button>
+        <button id="quoteBtn" class="button">
+            <span id="lessButtonText">
+                <i class="fa fa-cog fa-1x fa-spin"></i>
+            </span>
+        </button>
 
+    </div>
     <!-- quote display box -->
     <section id="quoteBox" class="flex column">
 
         <h3 id="words">
-            <span id="newWord">the word</span>
+            <span id="newWord"></span>
         </h3>
         <div id="definitions">
-            <span id="newDef">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptas repellat, tenetur, ex voluptatum
-                aliquam ut illum qui nemo vero harum vitae!</span>
+            <span id="newDef"></span>
         </div>
 
     </section>
 
-            <button id="tweetBtn" class="button">Tweet</button>
-        
+    <div id="btnIsland" class="flex">
+        <button id="tweetBtn" class="button">
+            <span id="tweetButtonText">Tweet this</span>
+        </button>
+    </div>
 
 
 
