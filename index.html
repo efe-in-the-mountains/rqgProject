@@ -14,51 +14,52 @@
 
 </head>
 
-<body class="heaven">
+<body>
+    <div id="main" class="flex row">
+        <div id="rqgContainer">
+            <!-- header -->
+            <div class="header">
+                <h1>Ambrose Bierce</h1>
+                <h2>Excerpts from the Devil's Dictionary</h2>
+            </div>
 
-    <!-- header -->
-    <header>
-        <h1>Ambrose Bierce</h1>
-        <h2>Excerpts from the Devil's Dictionary</h2>
-    </header>
+            <!-- button arcade -->
+            <div id="btnArcade" class="flex row">
+                <button id="quoteBtn" class="button">
+                <span id="moreButtonText">XXclick hereXX</span>
+            </button>
+                <a href="https://www.youtube.com/watch?v=jhicDUgXyNg" alt="link to some nice sounds" target="_blank">
+                   <button id="quoteBtn" class="button" >
+                    <i class="fa fa-cog fa-1x fa-spin"></i>
+                    </button></a>
 
-    <!-- button arcade -->
-    <div id="btnArcade" class="flex row">
-        <button id="quoteBtn" class="button">
-            <span id="moreButtonText">Yes, please!</span>
-        </button>
-        <button id="quoteBtn" class="button">
-            <span id="lessButtonText"> SAVE me, Jeebus!</span>
-        </button>
-        <button id="quoteBtn" class="button">
-            <span id="lessButtonText">
-                <i class="fa fa-cog fa-1x fa-spin"></i>
-            </span>
-        </button>
+            </div>
+            <!-- quote display box -->
+            <section id="quoteBox" class="flex column">
 
-    </div>
-    <!-- quote display box -->
-    <section id="quoteBox" class="flex column">
+                <h3 id="words">
+                    <span id="newWord"></span>
+                </h3>
+                <div id="definitions">
+                    <span id="newDef"></span>
+                </div>
 
-        <h3 id="words">
-            <span id="newWord"></span>
-        </h3>
-        <div id="definitions">
-            <span id="newDef"></span>
+            </section>
+
+            <div id="btnIsland" class="flex">
+                <button id="tweetBtn" class="button">
+                <span id="tweetButtonText">Tweet</span> <i class="icon fa fa-twitter fa-2x"></i>
+            </button>
+            </div>
+
         </div>
 
-    </section>
+        <figure id="imgWrapper" class="flex row">
+            <div id="imgDisplay" class="heaven">
 
-    <div id="btnIsland" class="flex">
-        <button id="tweetBtn" class="button">
-            <span id="tweetButtonText">Tweet this</span>
-        </button>
+            </div>
+        </figure>
     </div>
-
-
-
-
-
 
     <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
     <script src="script.js"></script>
