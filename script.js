@@ -145,16 +145,12 @@ var dictionary = [{
   }
 ];
 // random bg stuff
-var imgClassList = ["hell", "hell1", "hell2", "hell3", "heaven", "heaven1"];
+var imgClassList = ["hell", "hell1", "hell2", "hell3", "heaven", "heaven1", "heaven2", "heaven3"];
 var imgDisplay = document.getElementById("imgDisplay");
 
 // small arrays for text and text functions
 var libraryBadArr = ["click, click", "..:.;..", "do not resist A.B.", "yes, YES! MORE", "AGAIN, dammit"];
 var libraryTweetArr = ["tweet", "woke tweet, brah", "teach someone", "put the phone down", "look up!"];
-
-var moreBtnText = document.getElementById("moreButtonText");
-var tweetBtnText = document.getElementById("tweetButtonText");
-
 
 // quote box
 var defDisplay = document.getElementById("newDef");
@@ -164,12 +160,24 @@ var wordBox = document.getElementById("words");
 var defBox = document.getElementById("definitions");
 
 // buttons
+var moreBtnText = document.getElementById("moreButtonText");
+var tweetBtnText = document.getElementById("tweetButtonText");
+var tweetBtn = document.getElementById("tweetBtn");
+
+
+
+// eventlistener and functions
 quoteBtn.addEventListener("click", function () {
     newQuote();
     moreBadText();
     tweetText();
     changeImg();
 });
+
+tweetBtn.addEventListener("click", function () {
+    tweetText();
+});
+
 
 function newQuote() {
     var random = Math.floor(Math.random() * dictionary.length);
@@ -190,4 +198,17 @@ function tweetText() {
 function changeImg() {
     var random = Math.floor(Math.random() * imgClassList.length);
     imgDisplay.className = imgClassList[random];
+}
+
+// twitter
+function tweet() {
+    var link = document.createElement('a');
+    link.setAttribute('href', 'https://twitter.com/share');
+    link.setAttribute('class', 'twitter-share-button');
+    link.setAttribute('style', 'margin-top:5px;');
+    link.setAttribute("data-text", wordDisplay + " " + defDisplay + " ~ Ambrose Bierce");
+    link.setAttribute("data-via", "denvycom");
+    link.setAttribute("data-size", "large");
+    this.lowermessageContainer.appendChild(link);
+    twttr.widgets.load(); //very important
 }

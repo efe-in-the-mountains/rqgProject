@@ -127,6 +127,8 @@ button {
 button:hover {
     background-color: red;
     color: white;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
 }
 
 /* .header
@@ -144,15 +146,20 @@ h1 {
     width: 60%;
     font-size: 2rem;
     margin: 1rem auto;
+    border: 0.5rem solid black;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
 }
 
 h2 {
     width: 90%;
     font-size: 1.5rem;
     margin: 0 auto;
-    border-bottom: 0.5rem solid black;
-    border-right: 0.5rem solid black;
+    border: 0.5rem solid black;
     padding-bottom: .25rem;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
+    s
 }
 
 /* button arcade, where the buttons play
@@ -185,6 +192,8 @@ ___________________*/
     border-bottom: .25rem solid white;
     border-right: .25rem solid white;
     border-radius: 0 0 10px 0;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
 }
 
 #definitions {
@@ -199,6 +208,8 @@ ___________________*/
 
     border-left: .50rem solid white;
     border-radius: 0 0 10px 0;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
 }
 
 /* lonely button
@@ -229,4 +240,6 @@ _________________________*/
 #tweetBtn:hover {
     color: white;
     background-color: steelblue;
+    -webkit-box-shadow: 0 1rem 2rem black;
+    box-shadow: 0 1rem 2rem black;
 }
