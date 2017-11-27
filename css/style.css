@@ -33,6 +33,10 @@ a:hover {
     background-image: url("../img/heaven2.jpg");
 }
 
+.heaven3 {
+    background-image: url("../img/heaven3.jpg");
+}
+
 
 
 .hell {
@@ -47,11 +51,20 @@ a:hover {
     background-image: url("../img/hell2.jpg");
 }
 
+.hell3 {
+    background-image: url("../img/hell3.jpg");
+}
+
+.hell4 {
+    background-image: url("../img/hell4.jpg");
+}
+
 #main {
     width: 100vw;
     height: 100vh;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+
 }
 
 /* special .'s */
@@ -85,26 +98,30 @@ _____________________________*/
 
 #rqgContainer {
     width: 40%;
-    height: 60%;
+    height: 100%;
 }
 
 #imgWrapper {
     width: 55%;
     height: 100%;
     overflow: hidden;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 #imgDisplay {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 85%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    box-shadow: 0 1rem 2rem black;
 
 }
 
+img {
+    align-self: center;
+}
 
 
 /* button flobal 
@@ -112,8 +129,8 @@ _____________________________*/
 
 button {
     font-size: 1.75rem;
-    color: black;
-    border: none;
+    color: red;
+    border: .5rem double red;
     background-color: transparent;
     outline: none;
     margin-top: 2rem;
@@ -127,8 +144,6 @@ button {
 button:hover {
     background-color: red;
     color: white;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    box-shadow: 0 1rem 2rem black;
 }
 
 /* .header
@@ -146,18 +161,21 @@ h1 {
     width: 60%;
     font-size: 2rem;
     margin: 1rem auto;
-    border: 0.5rem solid black;
+    border: 0.5rem solid coral;
     -webkit-box-shadow: 0 1rem 2rem black;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 1rem 2rem black;
+
 }
 
 h2 {
     width: 90%;
     font-size: 1.5rem;
     margin: 0 auto;
-    border: 0.5rem solid black;
+    border: 0.5rem solid coral;
     padding-bottom: .25rem;
     -webkit-box-shadow: 0 1rem 2rem black;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 1rem 2rem black;
     s
 }
@@ -168,6 +186,9 @@ ____________________*/
 #btnArcade {
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    align-items: center;
+    margin: 0rem auto;
+    height: 4rem;
 }
 
 
@@ -177,21 +198,19 @@ ___________________*/
 #quoteBox {
     width: 100%;
     height: auto;
-    margin-top: 0.5rem;
 }
 
 #words {
     width: auto;
     height: auto;
-    margin: 0 auto;
+    margin: 1rem auto;
     color: white;
     font-size: 2rem;
     font-weight: bold;
     padding: 0.5rem;
     background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: .25rem solid white;
-    border-right: .25rem solid white;
-    border-radius: 0 0 10px 0;
+    border-bottom: .25rem solid darkgreen;
+    border-radius: 0 0 10px 10px;
     -webkit-box-shadow: 0 1rem 2rem black;
     box-shadow: 0 1rem 2rem black;
 }
@@ -204,10 +223,8 @@ ___________________*/
     background-color: rgba(0, 0, 0, 0.8);
     font-size: 1rem;
     color: white;
-    border-bottom: .25rem solid white;
-
-    border-left: .50rem solid white;
-    border-radius: 0 0 10px 0;
+    border-bottom: .25rem solid darkgreen;
+    border-radius: 0 0 10px 10px;
     -webkit-box-shadow: 0 1rem 2rem black;
     box-shadow: 0 1rem 2rem black;
 }
@@ -218,28 +235,6 @@ _________________________*/
 #btnIsland {
     width: 80%;
     height: auto;
-    margin: .5rem auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-}
-
-#tweetButtonText {
-    color: white;
-}
-
-.icon {
-    color: steelblue;
-}
-
-.icon:hover {
-    color: white;
-}
-
-#tweetBtn:hover {
-    color: white;
-    background-color: steelblue;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    box-shadow: 0 1rem 2rem black;
+    margin: 1.5rem auto;
+    justify-content: center;
 }

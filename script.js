@@ -145,7 +145,7 @@ var dictionary = [{
   }
 ];
 // random bg stuff
-var imgClassList = ["hell", "hell1", "hell2", "hell3", "heaven", "heaven1", "heaven2", "heaven3"];
+var imgClassList = ["hell", "hell1", "hell2", "hell3", "hell4", "heaven", "heaven1", "heaven2", "heaven3"];
 var imgDisplay = document.getElementById("imgDisplay");
 
 // small arrays for text and text functions
@@ -163,6 +163,7 @@ var defBox = document.getElementById("definitions");
 var moreBtnText = document.getElementById("moreButtonText");
 var tweetBtnText = document.getElementById("tweetButtonText");
 var tweetBtn = document.getElementById("tweetBtn");
+var tweetLink = document.getElementById("tweetLink");
 
 
 
@@ -170,12 +171,9 @@ var tweetBtn = document.getElementById("tweetBtn");
 quoteBtn.addEventListener("click", function () {
     newQuote();
     moreBadText();
-    tweetText();
+        tweetText();
     changeImg();
-});
-
-tweetBtn.addEventListener("click", function () {
-    tweetText();
+    //    tweetContent();
 });
 
 
@@ -196,19 +194,7 @@ function tweetText() {
 }
 
 function changeImg() {
+    imgDisplay.className = " ";
     var random = Math.floor(Math.random() * imgClassList.length);
     imgDisplay.className = imgClassList[random];
-}
-
-// twitter
-function tweet() {
-    var link = document.createElement('a');
-    link.setAttribute('href', 'https://twitter.com/share');
-    link.setAttribute('class', 'twitter-share-button');
-    link.setAttribute('style', 'margin-top:5px;');
-    link.setAttribute("data-text", wordDisplay + " " + defDisplay + " ~ Ambrose Bierce");
-    link.setAttribute("data-via", "denvycom");
-    link.setAttribute("data-size", "large");
-    this.lowermessageContainer.appendChild(link);
-    twttr.widgets.load(); //very important
 }

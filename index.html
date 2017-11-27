@@ -3,67 +3,90 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>RQG Project</title>
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ambrose Bierce rqg1.0</title>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <div id="main" class="flex row">
-        <div id="rqgContainer">
-            <!-- header -->
-            <div class="header">
-                <h1>Ambrose Bierce</h1>
-                <h2>Excerpts from the Devil's Dictionary</h2>
-            </div>
+  <div id="main" class="flex row">
 
-            <!-- button arcade -->
-            <div id="btnArcade" class="flex row">
-                <button id="quoteBtn" class="button">
-                <span id="moreButtonText">XXclick hereXX</span>
-            </button>
-                <a href="https://www.youtube.com/watch?v=jhicDUgXyNg" alt="link to some nice sounds" target="_blank">
-                   <button id="quoteBtn" class="button" >
-                    <i class="fa fa-cog fa-1x fa-spin"></i>
-                    </button></a>
+    <div id="rqgContainer">
+      <!-- header -->
+      <div class="header">
+        <h1>Ambrose Bierce</h1>
+        <h2>Excerpts from the Devil's Dictionary</h2>
+      </div>
 
-            </div>
-            <!-- quote display box -->
-            <section id="quoteBox" class="flex column">
+      <!-- button arcade -->
+      <div id="btnArcade" class="flex row">
+        <button id="quoteBtn" class="button">
+          <span id="moreButtonText">click here</span>
+        </button>
+        <a href="https://www.youtube.com/watch?v=jhicDUgXyNg" alt="link to some nice sounds" target="_blank">
+          <button id="quoteBtn" class="button" >
+            <i class="fa fa-cog fa-1x fa-spin"></i>
+          </button>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Ambrose_Bierce" alt="link to wikipedia page for Ambrose Bierce" target="_blank">
+          <button id="wikiBtn" class="button">
+            <i class="fa fa-wikipedia-w fa-1x"></i>
+          </button>
+        </a>
+      </div>
+      <!-- quote display box -->
+      <section id="quoteBox" class="flex column">
 
-                <h3 id="words">
-                    <span id="newWord"></span>
-                </h3>
-                <div id="definitions">
-                    <span id="newDef"></span>
-                </div>
-
-            </section>
-
-            <div id="btnIsland" class="flex">
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">
-                <button id="tweetBtn" class="button">
-                <span id="tweetButtonText">Tweet</span> <i class="icon fa fa-twitter fa-2x"></i>
-                    </button></a>
-            </div>
-
+        <h3 id="words">
+          <span id="newWord"></span>
+        </h3>
+        <div id="definitions">
+          <span id="newDef"></span>
         </div>
 
-        <figure id="imgWrapper" class="flex row">
-            <div id="imgDisplay" class="heaven">
+      </section>
 
-            </div>
-        </figure>
+      <div id="btnIsland" class="flex row">
+        <a id="tweetLink" class="twitter-share-button" href="https://twitter.com/intent/tweet?" data-size="large">
+          <span id="tweetButtonText">Tweet</span>
+        </a>
+      </div>
+
     </div>
 
-    <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
-    <script src="script.js"></script>
+    <figure id="imgWrapper" class="flex row">
+      <div id="imgDisplay" class="heaven">
+
+      </div>
+    </figure>
+  </div>
+  <!-- twitter -->
+  <script>
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+  <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
