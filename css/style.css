@@ -1,25 +1,111 @@
-/* html n body */
-
 html {
-    font-family: 'Ubuntu', sans-serif;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* .grid {
+    display: grid;
+} */
+
+.flex {
+    display: flex;
 }
 
-a:hover {
-    text-decoration: none;
-    color: inherit;
+.container {
+    height: auto;
+    width: 20rem;
+    margin: 3rem auto;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
+
+.header {
+    font-size: 2.25rem;
+    flex-direction: column;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+h1:first-child {
+    font-size: 2.75rem;
+    font-weight: bold;
+    color: darkred;
+}
+
+#btnArcade {
+    width: 75%;
+    margin: 1rem auto;
+    justify-content: space-between;
+}
+
+.button {
+    font-size: 1.25rem;
+    background-color: red;
+    color: antiquewhite;
+    padding: .15rem .25rem;
+    border: .05rem dashed black;
+    border-radius: .25rem .5rem .25rem .5rem;
+    
+}
+
+
+#quoteBox {
+    grid-row: span 4;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#words {
+    font-size: 1.75rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+#definitions {
+    font-size: 1.15rem;
+    width: 100%;
+}
+
+
+.twitter-share-button {
+    align-self: center;
+    justify-self: center;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 470px) {
+    .header {
+        font-size: 1.25rem;
+    }
+    .button {
+        font-size: .75rem;
+    }
+    #words {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    #definitions {
+        font-size: 1rem;
+    }
+}
+/* 
+#imgDisplay {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+} */
 
 .heaven {
     background-image: url("../img/heaven.jpg");
@@ -36,8 +122,6 @@ a:hover {
 .heaven3 {
     background-image: url("../img/heaven3.jpg");
 }
-
-
 
 .hell {
     background-image: url("../img/hell.jpg");
@@ -57,184 +141,4 @@ a:hover {
 
 .hell4 {
     background-image: url("../img/hell4.jpg");
-}
-
-#main {
-    width: 100vw;
-    height: 100vh;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-
-}
-
-/* special .'s */
-
-.flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-}
-
-.column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.green {
-    color: darkgreen;
-}
-
-/* rqgContainer and imgWrapper
-_____________________________*/
-
-#rqgContainer {
-    width: 40%;
-    height: 100%;
-}
-
-#imgWrapper {
-    width: 55%;
-    height: 100%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-#imgDisplay {
-    width: 90%;
-    height: 85%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    box-shadow: 0 1rem 2rem black;
-
-}
-
-img {
-    align-self: center;
-}
-
-
-/* button flobal 
-_____________________________*/
-
-button {
-    font-size: 1.75rem;
-    color: red;
-    border: .5rem double red;
-    background-color: transparent;
-    outline: none;
-    margin-top: 2rem;
-    border-radius: 10px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-}
-
-button:hover {
-    background-color: red;
-    color: white;
-}
-
-/* .header
-_______________________*/
-
-.header {
-    width: 100%;
-    color: black;
-    text-align: center;
-    margin-top: 15%;
-
-}
-
-h1 {
-    width: 60%;
-    font-size: 2rem;
-    margin: 1rem auto;
-    border: 0.5rem solid coral;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 1rem 2rem black;
-
-}
-
-h2 {
-    width: 90%;
-    font-size: 1.5rem;
-    margin: 0 auto;
-    border: 0.5rem solid coral;
-    padding-bottom: .25rem;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 1rem 2rem black;
-    s
-}
-
-/* button arcade, where the buttons play
-____________________*/
-
-#btnArcade {
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0rem auto;
-    height: 4rem;
-}
-
-
-/* quote container
-___________________*/
-
-#quoteBox {
-    width: 100%;
-    height: auto;
-}
-
-#words {
-    width: auto;
-    height: auto;
-    margin: 1rem auto;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: .25rem solid darkgreen;
-    border-radius: 0 0 10px 10px;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    box-shadow: 0 1rem 2rem black;
-}
-
-#definitions {
-    width: 75%;
-    height: auto;
-    margin: .5rem auto;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    font-size: 1rem;
-    color: white;
-    border-bottom: .25rem solid darkgreen;
-    border-radius: 0 0 10px 10px;
-    -webkit-box-shadow: 0 1rem 2rem black;
-    box-shadow: 0 1rem 2rem black;
-}
-
-/* lonely button
-_________________________*/
-
-#btnIsland {
-    width: 80%;
-    height: auto;
-    margin: 1.5rem auto;
-    justify-content: center;
 }

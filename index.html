@@ -2,92 +2,66 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Ambrose Bierce rqg1.0</title>
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-  <!-- CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A.Bierce RQG2.1</title>
+  <!-- font -->
+  <!-- icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  <!-- css -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
-  <div id="main" class="flex row">
 
-    <div id="rqgContainer">
-      <!-- header -->
-      <div class="header">
-        <h1>Ambrose Bierce</h1>
-        <h2>Excerpts from the Devil's Dictionary</h2>
-      </div>
+  <div id="app-container" class="flex container">
 
-      <!-- button arcade -->
-      <div id="btnArcade" class="flex row">
+    <!-- header -->
+    <div class="header flex">
+      <h1>Ambrose Bierce</h1>
+      <h1>Excerpts from the Devil's Dictionary</h1>
+    </div>
+    <!-- button arcade -->
+    <div id="btnArcade" class="flex">
+      <button id="quoteBtn" class="button">
+        <span id="moreButtonText">click here</span>
+      </button>
+
+      <a href="https://youtu.be/2lncloqtuT0" alt="link to some nice sounds" target="_blank">
         <button id="quoteBtn" class="button">
-          <span id="moreButtonText">click here</span>
+          <i class="fas fa-music"></i>
         </button>
-        <a href="https://www.youtube.com/watch?v=jhicDUgXyNg" alt="link to some nice sounds" target="_blank">
-          <button id="quoteBtn" class="button" >
-            <i class="fa fa-cog fa-1x fa-spin"></i>
-          </button>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Ambrose_Bierce" alt="link to wikipedia page for Ambrose Bierce" target="_blank">
-          <button id="wikiBtn" class="button">
-            <i class="fa fa-wikipedia-w fa-1x"></i>
-          </button>
-        </a>
-      </div>
-      <!-- quote display box -->
-      <section id="quoteBox" class="flex column">
-
-        <h3 id="words">
-          <span id="newWord"></span>
-        </h3>
-        <div id="definitions">
-          <span id="newDef"></span>
-        </div>
-
-      </section>
-
-      <div id="btnIsland" class="flex row">
-        <a id="tweetLink" class="twitter-share-button" href="https://twitter.com/intent/tweet?" data-size="large">
-          <span id="tweetButtonText">Tweet</span>
-        </a>
-      </div>
-
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Ambrose_Bierce" alt="link to wikipedia page for Ambrose Bierce" target="_blank">
+        <button id="wikiBtn" class="button">
+          <i class="fab fa-wikipedia-w"></i>
+        </button>
+      </a>
     </div>
 
-    <figure id="imgWrapper" class="flex row">
-      <div id="imgDisplay" class="heaven">
+    <!-- quote display box -->
+    <div id="quoteBox" class="flex">
+      <h3 id="words">
+        <span id="newWord"></span>
+      </h3>
+      <p id="definitions">
+        <span id="newDef"></span>
+      </p>
+    </div>
 
-      </div>
-    </figure>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a>
+
   </div>
-  <!-- twitter -->
-  <script>
-    window.twttr = (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {};
-      if (d.getElementById(id)) return t;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
 
-      t._e = [];
-      t.ready = function(f) {
-        t._e.push(f);
-      };
 
-      return t;
-    }(document, "script", "twitter-wjs"));
-  </script>
-  <script src="https://use.fontawesome.com/fd56ccca38.js"></script>
-  <script src="script.js"></script>
 
+
+  <!-- js -->
+  <script src="js/jquery-3.2.1.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
