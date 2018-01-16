@@ -144,13 +144,11 @@ var dictionary = [{
         word: "Brute"
   }
 ];
-// random bg stuff
-// var imgClassList = ["hell", "hell1", "hell2", "hell3", "hell4", "heaven", "heaven1", "heaven2", "heaven3"];
-// var imgDisplay = document.getElementById("imgDisplay");
+
 
 // small arrays for text and text functions
 var libraryBadArr = ["click, click", "..:.;..", "CLICK ME!!", "YES! MORE", "AGAIN, dammit","one more"];
-// var libraryTweetArr = ["tweet", "woke tweet, brah", "teach someone", "put the phone down", "look up!"];
+;
 
 // quote box
 var defDisplay = document.getElementById("newDef");
@@ -158,24 +156,26 @@ var wordDisplay = document.getElementById("newWord");
 var quoteBtn = document.getElementById("quoteBtn");
 var wordBox = document.getElementById("words");
 var defBox = document.getElementById("definitions");
+var tweetBtn = document.querySelector(".twitter-share-button");
 
 // buttons
 var moreBtnText = document.getElementById("moreButtonText");
-var tweetBtnText = document.getElementById("tweetButtonText");
-var tweetBtn = document.getElementById("tweetBtn");
-var tweetLink = document.getElementById("tweetLink");
 
+init();
 
 
 // eventlistener and functions
+
 quoteBtn.addEventListener("click", function () {
     newQuote();
-    moreBadText();
-    // tweetText();
-    // changeImg();
-    // tweetContent();
+    newBtnText();
+    tweetBtnAppear();
 });
 
+function init() {
+      newQuote();
+      document.querySelector('.tweet-button').style.display = 'none';
+}
 
 function newQuote() {
     var random = Math.floor(Math.random() * dictionary.length);
@@ -183,18 +183,11 @@ function newQuote() {
     wordDisplay.textContent = "~" + dictionary[random].word;
 }
 
-function moreBadText() {
+function newBtnText() {
     var random = Math.floor(Math.random() * libraryBadArr.length);
     moreBtnText.textContent = libraryBadArr[random];
 }
 
-// function tweetText() {
-//     var random = Math.floor(Math.random() * libraryTweetArr.length);
-//     tweetBtnText.textContent = libraryTweetArr[random];
-// }
-
-// function changeImg() {
-//     imgDisplay.className = " ";
-//     var random = Math.floor(Math.random() * imgClassList.length);
-//     imgDisplay.className = imgClassList[random];
-// }
+function tweetBtnAppear() {
+      document.querySelector('.tweet-button').style.display = 'block';
+}

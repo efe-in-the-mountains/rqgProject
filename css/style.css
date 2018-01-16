@@ -8,84 +8,116 @@ body {
     margin: 0;
 }
 
-/* .grid {
-    display: grid;
-} */
-
 .flex {
     display: flex;
 }
 
 .container {
-    height: auto;
-    width: 20rem;
-    margin: 3rem auto;
+    height: 75vh;
+    width: 55vw;
+    margin: 1rem auto;
+    background-color: #ffeead;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border: .25rem solid #ff6f69;
+    border-radius: .5rem;
     
 }
 
+.container-upper {
+    flex-direction: column;
+    justify-content: center;
+    background-color: #96ceb4;
+    box-shadow: 0 .25rem .5rem black;
+   border-radius: .5rem .5rem 0 0;
+}
+
+.container-lower {
+    flex-direction: column;
+    justify-content: space-between;
+}
 .header {
     font-size: 2.25rem;
     flex-direction: column;
-    color: darkolivegreen;
+    color: #ffeead;
     text-align: center;
 }
 
 h1:first-child {
     font-size: 2.75rem;
     font-weight: bold;
-    color: darkred;
+    color: #ff6f69;
 }
 
 #btnArcade {
     width: 75%;
     margin: 1rem auto;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .button {
     font-size: 1.25rem;
-    background-color: red;
+    background-color: #ff6f69 ;
     color: antiquewhite;
     padding: .15rem .25rem;
-    border: .05rem dashed black;
-    border-radius: .25rem .5rem .25rem .5rem;
-    
+    border: none;
+    border-radius: .75rem;
+    margin: 0 .25rem;
+    transition: all .5s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #ffeead;
+    color: #ff6f69;
+    box-shadow: 0 .1rem .5rem black;
 }
 
 
 #quoteBox {
-    grid-row: span 4;
+    margin: .75rem auto;
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
 }
 
 #words {
     font-size: 1.75rem;
     font-weight: bold;
-    width: 100%;
 }
 
 #definitions {
+    text-indent: 1.25rem;
     font-size: 1.15rem;
     width: 100%;
 }
 
-
-.twitter-share-button {
-    align-self: center;
-    justify-self: center;
+.tweet-button {
+    margin: .75rem auto;
 }
 
 /* media queries */
 
 @media only screen and (max-width: 768px) {
-    
+    .container {
+        height: 90vh;
+        width: 90vw;
+    }
+    #definitions {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 470px) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        border: none;
+    }
+    
     .header {
         font-size: 1.25rem;
     }
@@ -98,6 +130,8 @@ h1:first-child {
     }
     #definitions {
         font-size: 1rem;
+        width: 90%;
+        margin: 0 auto;
     }
 }
 /* 
@@ -107,7 +141,7 @@ h1:first-child {
     background-size: contain;
 } */
 
-.heaven {
+/* .heaven {
     background-image: url("../img/heaven.jpg");
 }
 
@@ -141,4 +175,4 @@ h1:first-child {
 
 .hell4 {
     background-image: url("../img/hell4.jpg");
-}
+} */

@@ -9,6 +9,7 @@
   <!-- font -->
   <!-- icons -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <!-- css -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -17,42 +18,41 @@
 <body>
 
   <div id="app-container" class="flex container">
-
-    <!-- header -->
-    <div class="header flex">
-      <h1>Ambrose Bierce</h1>
-      <h1>Excerpts from the Devil's Dictionary</h1>
-    </div>
-    <!-- button arcade -->
-    <div id="btnArcade" class="flex">
-      <button id="quoteBtn" class="button">
-        <span id="moreButtonText">click here</span>
-      </button>
-
-      <a href="https://youtu.be/2lncloqtuT0" alt="link to some nice sounds" target="_blank">
+    <div class="container-upper flex">
+      <!-- header -->
+      <div class="header flex">
+        <h1>Ambrose Bierce</h1>
+        <h1>Excerpts from the Devil's Dictionary</h1>
+      </div>
+      <!-- button arcade -->
+      <div id="btnArcade" class="flex">
         <button id="quoteBtn" class="button">
-          <i class="fas fa-music"></i>
+          <span id="moreButtonText">click here</span>
         </button>
-      </a>
-      <a href="https://en.wikipedia.org/wiki/Ambrose_Bierce" alt="link to wikipedia page for Ambrose Bierce" target="_blank">
-        <button id="wikiBtn" class="button">
-          <i class="fab fa-wikipedia-w"></i>
-        </button>
-      </a>
+
+        <a href="https://en.wikipedia.org/wiki/Ambrose_Bierce" alt="link to wikipedia page for Ambrose Bierce" target="_blank">
+          <button id="wikiBtn" class="button">
+            <i class="fab fa-wikipedia-w"></i>
+          </button>
+        </a>
+      </div>
     </div>
+    <div class="container-lower flex">
+      <!-- quote display box -->
+      <div id="quoteBox" class="flex">
+        <h3 id="words">
+          <span id="newWord"></span>
+        </h3>
+        <p id="definitions">
+          <span id="newDef"></span>
+        </p>
+      </div>
 
-    <!-- quote display box -->
-    <div id="quoteBox" class="flex">
-      <h3 id="words">
-        <span id="newWord"></span>
-      </h3>
-      <p id="definitions">
-        <span id="newDef"></span>
-      </p>
+      <div class="tweet-button">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a>
+      </div>
+
     </div>
-
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a>
-
   </div>
 
 
@@ -60,7 +60,6 @@
 
   <!-- js -->
   <script src="js/jquery-3.2.1.js"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="js/script.js"></script>
 </body>
 
