@@ -9,6 +9,8 @@ body {
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -17,28 +19,47 @@ body {
     width: 55vw;
     margin: 1rem auto;
     background-color: #ffeead;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border: .25rem solid #ff6f69;
     border-radius: .5rem;
     
 }
 
 .container-upper {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #96ceb4;
-    box-shadow: 0 .25rem .5rem black;
-   border-radius: .5rem .5rem 0 0;
+    -webkit-box-shadow: 0 .25rem .5rem black;
+            box-shadow: 0 .25rem .5rem black;
+   border-radius: .15rem .15rem 0 0;
 }
 
 .container-lower {
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .header {
     font-size: 2.25rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: #ffeead;
     text-align: center;
 }
@@ -52,7 +73,9 @@ h1:first-child {
 #btnArcade {
     width: 75%;
     margin: 1rem auto;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .button {
@@ -63,22 +86,33 @@ h1:first-child {
     border: none;
     border-radius: .75rem;
     margin: 0 .25rem;
+    -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
 
 .button:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     background-color: #ffeead;
     color: #ff6f69;
-    box-shadow: 0 .1rem .5rem black;
+    -webkit-box-shadow: 0 .1rem .5rem black;
+            box-shadow: 0 .1rem .5rem black;
+}
+
+.button:active {
+    border: none;
 }
 
 
 #quoteBox {
     margin: .75rem auto;
     width: 100%;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     text-align: center;
 }
 
