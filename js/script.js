@@ -161,7 +161,7 @@ var tweetBtn = document.querySelector(".twitter-share-button");
 // buttons
 var moreBtnText = document.getElementById("moreButtonText");
 
-init();
+// init();
 
 
 // eventlistener and functions
